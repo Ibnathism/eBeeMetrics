@@ -30,17 +30,19 @@ docker:
 	sudo apt install -y docker.io
 	sudo systemctl enable docker
 	sudo systemctl start docker
+	sudo usermod -aG docker $$USER
+	@echo "Added $$USER to docker group."
+	@echo "Log out and log back in, or run: newgrp docker"
 
 venv:
-	cd /home/test/eBeeMetrics/lib/latencies
-	python3 -m venv venv
-	source venv/bin/activate
-	pip install numpy matplotlib pandas scikit-learn
-	deactivate 2>/dev/null
-	cd ../..
+	cd /home/test/eBeeMetrics/lib/latencies && \
+	python3 -m venv venv && \
+	venv/bin/python -m pip install --upgrade pip && \
+	venv/bin/python -m pip install numpy matplotlib pandas scikit-learn
 
 check:
 	@echo "Kernel: $$(uname -r)"
 	@echo -n "docker: " && (docker --version || echo "NOT INSTALLED")
 	@echo -n "bcc tools: " && (dpkg -s bpfcc-tools >/dev/null 2>&1 && echo "OK" || echo "NOT INSTALLED")
 	@echo -n "python bpfcc: " && (python3 -c "import bcc; print('OK')" 2>/dev/null || echo "NOT INSTALLED")
+	@echo -n "docker group: " && (groups $$USER | grep -q docker && echo "OK" || echo "LOG OUT/LOG IN REQUIRED")

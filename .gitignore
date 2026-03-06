@@ -1,0 +1,5 @@
+*.json
+*.pdf
+*.csv
+lib/latencies/venv
+*.png

@@ -14,13 +14,13 @@ if [[ -f "$OUTPUT_JSON_CLIENT" ]]; then
     echo "Deleted existing $OUTPUT_JSON_CLIENT"
 fi
 
-LATENCY_PLOT="latencies/latency_comparison.png"
+LATENCY_PLOT="latencies/latency_comparison_http_grpc.png"
 if [[ -f "$LATENCY_PLOT" ]]; then
     rm -f "$LATENCY_PLOT"
     echo "Deleted existing $LATENCY_PLOT"
 fi
 
-THROUGHPUT_PLOT="latencies/throughput_comparison.png"
+THROUGHPUT_PLOT="latencies/throughput_comparison_http_grpc.png"
 if [[ -f "$THROUGHPUT_PLOT" ]]; then
     rm -f "$THROUGHPUT_PLOT"
     echo "Deleted existing $THROUGHPUT_PLOT"

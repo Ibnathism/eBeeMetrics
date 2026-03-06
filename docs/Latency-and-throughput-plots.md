@@ -42,7 +42,7 @@ docker exec -it triton-client /bin/bash
 cd /workspace/client/src/python/examples/eBeeMetrics
 
 # Run the client load generator:
-./run_client.sh <benchmark-name>
+./run-client.sh <benchmark-name>
 ```
 This will:
 - Attach eBPF probes to the Triton container

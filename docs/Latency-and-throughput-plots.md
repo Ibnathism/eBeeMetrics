@@ -47,7 +47,7 @@ cd /workspace/client/src/python/examples/eBeeMetrics
 This will:
 - Attach eBPF probes to the Triton container
 - Sweep RPS values
-- Store eBeeMetrics results in: `latencies/latencies_by_rps.json`
+- Store eBeeMetrics results in: `latencies/server_latencies_by_rps.json`
 - Generate HTTP or gRPC load at different RPS values
 - Store client-side latencies inside the container at: `client_latencies/client_latencies_by_rps.json`
 

@@ -97,7 +97,7 @@ def main():
         ax.grid(True, linestyle="--", alpha=0.5)
         ax.legend()
 
-    fig_lat.suptitle("Latency (P95) Comparison", y=1.02, fontsize=14)
+    fig_lat.suptitle("Latency (P95) Comparison", y=0.99, fontsize=14)
     fig_lat.tight_layout()
     fig_lat.savefig("latency_comparison_http_grpc.png", dpi=300)
     plt.close(fig_lat)
@@ -150,7 +150,7 @@ def main():
         ax.set_ylabel("eBeeMetrics Throughput (RPS)")
         ax.grid(False)
 
-    fig_tp.suptitle("Throughput Comparison", y=1.02, fontsize=14)
+    fig_tp.suptitle("Throughput Comparison", y=0.99, fontsize=14)
     fig_tp.tight_layout()
     fig_tp.savefig("throughput_comparison_http_grpc.png", dpi=300)
     plt.close(fig_tp)

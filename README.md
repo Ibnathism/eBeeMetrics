@@ -6,9 +6,9 @@ This repository contains eBeeMetrics experiments and plotting scripts for compar
 ---
 ## Repository Layout
 - `client/triton/`: Client runners for Triton HTTP and Triton gRPC. These are already set in the existing `triton-client` docker container in the Chameleon instance.
-- `lib/`: eBeeMetrics tracing library + runner scripts + BPF programs.
-- `lib/bpf/`: kernel programs used by the library
-- `lib/latencies/`: storage for latency data and plots 
+- `lib/`: eBeeMetrics tracing library
+   - `lib/bpf/`: kernel programs used by the library
+   - `lib/latencies/`: storage for latency data and plots 
 - `docs/`: Step-by-step documentation for setup and experiment execution.
 
 ## Quickstart (Artifact Evaluation on Chameleon)

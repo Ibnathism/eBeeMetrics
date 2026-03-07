@@ -4,6 +4,12 @@ An eBPF-based library framework to accurately observe application-level metrics 
 This repository contains eBeeMetrics experiments and plotting scripts for comparing **client-reported** latency/throughput vs **eBeeMetrics-reported** latency/throughput for **Triton HTTP** and **Triton gRPC**.
 
 ---
+## Repository Layout
+- `client/triton/`: Client runners for Triton HTTP and Triton gRPC. These are already set in the existing `triton-client` docker container in the Chameleon instance.
+- `lib/`: eBeeMetrics tracing library + runner scripts + BPF programs.
+- `lib/bpf/`: kernel programs used by the library
+- `lib/latencies/`: storage for latency data and plots 
+- `docs/`: Step-by-step documentation for setup and experiment execution.
 
 ## Quickstart (Artifact Evaluation on Chameleon)
 
@@ -46,13 +52,6 @@ For setting up the client for `triton-http` and `triton-grpc` clients, the clien
 ### 5) Run the experiments + generate plots
 
 Finally, follow: [docs/Latency-and-throughput-plots.md](docs/Latency-and-throughput-plots.md)
-
-Repository Layout (high level)
-- `client/triton/`: Client runners for Triton HTTP and Triton gRPC. These are already set in the existing `triton-client` docker container in the Chemeleon instance.
-
-- `lib/`: eBeeMetrics tracing library + runner scripts + BPF programs.
-
-- `docs/`: Step-by-step documentation for setup and experiment execution.
 
 Notes
 - All measured latencies are stored as JSON under `lib/latencies/`

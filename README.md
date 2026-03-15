@@ -56,3 +56,15 @@ Finally, follow: [docs/Latency-and-throughput-plots.md](docs/Latency-and-through
 Notes
 - All measured latencies are stored as JSON under `lib/latencies/`
 - The plotting script produces side-by-side HTTP vs gRPC comparison figures.
+
+## Citation
+
+If you use eBeeMetrics in your research, please cite our paper:
+```bash
+@inproceedings{ibnath2026ebeemetrics,
+  title     = {eBeeMetrics: An eBPF-based Library Framework for Feedback-free Observability of QoS Metrics},
+  author    = {Ibnath, Muntaka and Rezvani, Mohammadreza and Wong, Daniel},
+  booktitle = {Proceedings of the IEEE International Symposium on Performance Analysis of Systems and Software (ISPASS)},
+  year      = {2026}
+}
+```

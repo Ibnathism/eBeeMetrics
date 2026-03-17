@@ -89,7 +89,7 @@ def attach_kprobe_read_sendmsg(bpf):
     bpf.attach_kretprobe(event="__x64_sys_sendmsg", fn_name="trace_sendmsg_exit")
 
 def attach_uprobe_grpc_core(bpf):
-    triton_binary = "/var/lib/docker/overlay2/972bbec5a2a89e332901e1564aa2f3d59b80f0ec7d77ed547cbcccdaab7694e6/diff/opt/tritonserver/bin/tritonserver"
+    triton_binary = "/var/lib/docker/overlay2/dc5c7869f8fb1775ac26ecd666740d672ec0108069d218334b61be15ea108b3a/diff/opt/tritonserver/bin/tritonserver"
     constructor_symbol = "_ZN18grpc_chttp2_streamC1EP21grpc_chttp2_transportP20grpc_stream_refcountPKvPN9grpc_core5ArenaE"
     metadata_symbol = "_Z49grpc_chttp2_maybe_complete_recv_trailing_metadataP21grpc_chttp2_transportP18grpc_chttp2_stream"
     bpf.attach_uprobe(name=triton_binary, sym=constructor_symbol, fn_name="trace_constructor")

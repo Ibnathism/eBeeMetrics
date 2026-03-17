@@ -30,3 +30,14 @@ This command demangles the function symbol to match it with the actual function 
 ```bash
 echo <symbol> | c++filt
 ```
+
+## Update the Triton binary path in the code
+
+After locating the correct binary path, set it in the `triton_binary` variable inside the following function in both files in `/home/test/eBeeMetrics/lib` directory:
+
+- `lib.py`
+- `lib_for_latency.py`
+
+Function to update: `attach_uprobe_grpc_core(bpf):`
+
+Replace the `triton_binary` value with the full path you found from the find command above.

@@ -19,7 +19,8 @@ tools:
 	  linux-tools-$$(uname -r) \
 	  linux-cloud-tools-$$(uname -r) \
 	  linux-tools-generic \
-	  linux-cloud-tools-generic
+	  linux-cloud-tools-generic \
+	  python3-numpy
 
 bcc:
 	sudo apt update

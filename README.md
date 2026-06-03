@@ -58,13 +58,18 @@ Notes
 - The plotting script produces side-by-side HTTP vs gRPC comparison figures.
 
 ## Citation
-
+Paper: https://ieeexplore.ieee.org/abstract/document/11527261
 If you use eBeeMetrics in your research, please cite our paper:
 ```bash
-@inproceedings{ibnath2026ebeemetrics,
-  title     = {eBeeMetrics: An eBPF-based Library Framework for Feedback-free Observability of QoS Metrics},
-  author    = {Ibnath, Muntaka and Rezvani, Mohammadreza and Wong, Daniel},
-  booktitle = {Proceedings of the IEEE International Symposium on Performance Analysis of Systems and Software (ISPASS)},
-  year      = {2026}
+@INPROCEEDINGS{11527261,
+  author={Ibnath, Muntaka and Rezvani, Mohammadreza and Wong, Daniel},
+  booktitle={2026 IEEE International Symposium on Performance Analysis of Systems and Software (ISPASS)}, 
+  title={eBeeMetrics: An eBPF-based Library Framework for Feedback-free Observability of QoS Metrics}, 
+  year={2026},
+  volume={},
+  number={},
+  pages={518-530},
+  keywords={Measurement;Servers;Quality of service;Streams;Conferences;Information rates;Libraries;Throughput;Probes;Kernel;ebpf;observability;qos metrics;latency-sensitive workloads;request tracing;throughput;grpc;http/1.1;system management runtimes;http/2;triton inference workload;vswarm;cloudesuite},
+  doi={10.1109/ISPASS69572.2026.00056}
 }
 ```

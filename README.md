@@ -59,6 +59,7 @@ Notes
 
 ## Citation
 Paper: https://ieeexplore.ieee.org/abstract/document/11527261
+
 If you use eBeeMetrics in your research, please cite our paper:
 ```bash
 @INPROCEEDINGS{11527261,
